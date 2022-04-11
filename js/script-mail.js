@@ -20,12 +20,20 @@ const mailList = ["violinhi@hotmail.com",
 
 const mailContainer = document.querySelector(".mail-container")
 
-const userMail = "jesse@mac.com" /* prompt("Inserire eMail") */;
+const userMail = prompt("Inserire eMail");
 
 for(let i = 0; i < mailList.length; i++){
+
+  const buttonRl = document.createElement('button');
+  buttonRl.className = 'output';
+  
   
   if(userMail === mailList[i]){
+    mailContainer.append(buttonRl);
+    buttonRl.append("Entra");
 
+  }else{
+    mailContainer.append(buttonRl);
+    buttonRl.append("Mail non riconosciuta");
   }
-
 }
