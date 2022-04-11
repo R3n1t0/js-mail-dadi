@@ -19,21 +19,24 @@ const mailList = ["violinhi@hotmail.com",
 ]
 
 const mailContainer = document.querySelector(".mail-container")
+const buttonRl = document.createElement('button');
+buttonRl.className = 'output';
+
 
 const userMail = prompt("Inserire eMail");
+let mailPresente = false;
 
 for(let i = 0; i < mailList.length; i++){
 
-  const buttonRl = document.createElement('button');
-  buttonRl.className = 'output';
-  
-  
-  if(userMail === mailList[i]){
-    mailContainer.append(buttonRl);
-    buttonRl.append("Entra");
+  mailContainer.append(buttonRl);
 
-  }else{
-    mailContainer.append(buttonRl);
-    buttonRl.append("Mail non riconosciuta");
+  if(userMail === mailList[i]){
+    mailPresente = true;
   }
+}
+
+if(mailPresente == true){
+  buttonRl.append("Mail riconosciuta. ENTRA");
+}else{
+  buttonRl.append("Mail non riconosciuta. RIPROVA"); 
 }
