@@ -18,13 +18,14 @@ const mailList = ["violinhi@hotmail.com",
   "rkobes@mac.com"
 ]
 
+const mailContainer = document.querySelector(".mail-container")
 
 const userMail = "jesse@mac.com" /* prompt("Inserire eMail") */;
 
 for(let i = 0; i < mailList.length; i++){
   
   if(userMail === mailList[i]){
-    
+
   }
 
 }
